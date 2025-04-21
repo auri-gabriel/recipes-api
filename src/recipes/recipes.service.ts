@@ -8,11 +8,11 @@ import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class RecipesService {
-
+  
   constructor(private prisma: PrismaService) {}
 
   create(createRecipeDto: CreateRecipeDto) {
-    return this.prisma.recipe.create({ createRecipeDto });
+    return this.prisma.recipe.create({ data: createRecipeDto });
   }
 
   findAll() {
@@ -24,7 +24,7 @@ export class RecipesService {
   }
 
   update(id: number, updateRecipeDto: UpdateRecipeDto) {
-    return this.prisma.recipe.update({ where: { id }, updateRecipeDto });
+    return this.prisma.recipe.update({ where: { id }, data: updateRecipeDto });
   }
 
   remove(id: number) {
