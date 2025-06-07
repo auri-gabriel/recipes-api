@@ -18,13 +18,21 @@ A RESTful API for managing recipes, built with [NestJS](https://nestjs.com/) and
    cp .env.example .env
    ```
 
-3. **Generate Prisma client**
+3. **Start required services with Docker Compose**
+
+   This will start the database and any other required services in the background:
+
+   ```bash
+   docker compose up -d
+   ```
+
+4. **Generate Prisma client**
 
    ```bash
    npx prisma generate
    ```
 
-4. **Apply database schema**
+5. **Apply database schema**
 
    Push the Prisma schema to your database:
 
