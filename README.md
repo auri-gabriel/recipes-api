@@ -28,7 +28,19 @@
 ## Project setup
 
 ```bash
-$ npm install
+npm install
+```
+
+``` bash
+cp .env.example .env
+```
+
+``` bash
+npx prisma generate
+```
+
+``` bash
+npx prisma db push
 ```
 
 ## Compile and run the project
